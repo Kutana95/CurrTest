@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Test</string>
+    <string-array name="currency_variants">
+        <item>USD</item>
+        <item>RUB</item>
+        <item>EUR</item>
+    </string-array>
+</resources>
