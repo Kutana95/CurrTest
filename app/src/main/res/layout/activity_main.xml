@@ -14,13 +14,17 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Продать"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
+        android:digits="0123456789, "
+        android:maxLength="12"
+        android:numeric="decimal"
+        android:textAlignment="inherit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.316" />
 
     <Spinner
         android:id="@+id/spFrom"
@@ -35,10 +39,11 @@
         android:id="@+id/txCountTo"
         android:layout_width="125dp"
         android:layout_height="42dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:ems="10"
         android:hint="Купить"
         android:inputType="number"
+        android:maxLength="6"
         app:layout_constraintBottom_toBottomOf="@+id/txCountFrom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -68,5 +73,21 @@
         app:layout_constraintStart_toStartOf="@+id/txCountFrom"
         app:layout_constraintTop_toBottomOf="@+id/spFrom"
         app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/textViewSht1"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:text="шт"
+        app:layout_constraintBottom_toBottomOf="@+id/txCountFrom"
+        app:layout_constraintStart_toEndOf="@+id/txCountFrom" />
+
+    <TextView
+        android:id="@+id/textViewSht2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="шт"
+        app:layout_constraintBottom_toBottomOf="@+id/txCountTo"
+        app:layout_constraintStart_toEndOf="@+id/txCountTo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
